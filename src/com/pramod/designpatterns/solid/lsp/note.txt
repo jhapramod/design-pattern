@@ -1,0 +1,15 @@
+public boolean isSquare(int width, int height) {
+	return width == height;
+}
+
+class RectangleFactory {
+
+	public static Rectangle newRectangle(int width, int height) {
+		return new Rectangle(width, height);
+	
+	}
+	
+	public static Rectangle newSqare(int side) {
+		return Square(side, side);
+	}
+}

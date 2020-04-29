@@ -1,0 +1,19 @@
+	Person person2 = new Person(person1);
+	person2.firstName = "Sanjeev";
+	person2.address.houseNumber = 124;
+	
+	System.out.println(person1);
+	System.out.println(person2);
+		
+public Person(Person other) {
+		firstName = other.firstName;
+		lastName = other.lastName;
+		address = new Address(other.address);
+		
+	}
+	
+public Address(Address other) {
+		houseNumber = other.houseNumber ;
+		district = other.district;
+		state = other.state;
+	}

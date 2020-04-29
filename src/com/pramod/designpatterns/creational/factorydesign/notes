@@ -1,0 +1,48 @@
+Calendar cal = Calendar.getInstance();
+		
+System.out.println(cal);
+System.out.println(cal.get(Calendar.DAY_OF_MONTH));
+
+
+************************************************************************************************************************************************
+
+public class DemoFactoryDesignPattern {
+
+	public static void main(String[] args) {
+		ShapeFactory shape = new ShapeFactory();
+		
+		Shape circle = shape.getShape(ShapeType.CIRCLE);
+		circle.draw();
+		
+		Shape rectangle = shape.getShape(ShapeType.RECTANGLE);
+		rectangle.draw();
+		
+		Shape polygon = shape.getShape(ShapeType.POLYGON);
+		polygon.draw();
+
+	}
+
+}
+
+*************************************************************************************************************************************************************
+
+public class ShapeFactory {
+	public Shape getShape(ShapeType shapetype) {
+		switch(shapetype) {
+		case CIRCLE :
+			return new Circle();
+		case POLYGON :
+			return new Polygon();
+		case RECTANGLE:
+			return new Rectangle();
+
+		}
+		return null;
+	}
+
+}
+
+
+************************************************************************************************************************************************************************************
+
+

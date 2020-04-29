@@ -1,0 +1,23 @@
+	Person person1 = new Person("Pramod", "Jha", 
+			new Address(123, "Bangalore", "Karnataka"));		
+	Person person2 = person1;
+	person2.firstName = "Sanjeev";
+	person2.address.houseNumber = 124;
+	
+	System.out.println(person1);
+	System.out.println(person2);
+
+************************************************************
+Person person2 = (Person) person1.clone();	
+	
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return new Person(firstName, lastName, (Address)address.clone());
+	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException {
+		return new Address(houseNumber, district, state);
+	}
+	
