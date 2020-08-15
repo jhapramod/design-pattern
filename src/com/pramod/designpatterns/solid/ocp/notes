@@ -1,0 +1,14 @@
+	public List<Product> filterBySize(List<Product> products, Size size) {
+
+		return products.stream().filter(p -> p.getSize() == size).collect(Collectors.toList());
+
+	}
+	
+	public List<Product> filterBySizeAndColor(List<Product> products, Size size, Color color) {
+
+		return products.stream().filter(p -> p.getSize() == size && p.getColor() == color).collect(Collectors.toList());
+
+	}
+	
+********************************************************************************************************************************
+
