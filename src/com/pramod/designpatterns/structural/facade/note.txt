@@ -1,0 +1,5 @@
+1. make API easier to use
+2. Usually a refactoring pattern
+3. Reduce dependency on outside code.
+4. Example :
+			java.net.URL
